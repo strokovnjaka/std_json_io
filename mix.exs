@@ -9,7 +9,6 @@ defmodule StdJsonIo.Mixfile do
     [app: :std_json_io,
      name: "StdJsonIo",
      version: @version,
-     package: @package,
      elixir: "~> 1.1",
      source_url: @url,
      build_embedded: Mix.env == :prod,
@@ -39,15 +38,6 @@ defmodule StdJsonIo.Mixfile do
       {:poolboy, "~> 1.5.1"},
       {:poison, "~> 1.5.0"},
       {:fs, "~> 0.9.1"},
-    ]
-  end
-
-  defp package do
-    [
-      maintainers: @maintainers,
-      licenses: ["MIT"],
-      links: %{github: @url},
-      files: ~w(lib) ++ ~w(CHANGELOG.md LICENSE mix.exs README.md)
     ]
   end
 end
